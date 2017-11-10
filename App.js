@@ -65,28 +65,31 @@ import React, {Component} from 'react';
 import {
 	View,
 	Text,
-	StyleSheet,
-	StatusBar,
+  StyleSheet,
+  StatusBar
 } from 'react-native';
 
 
-import moment from "moment";
+import moment from 'moment';
 
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#000',
+		backgroundColor: 'pink',
 		justifyContent: 'center',
 		alignItems: 'center',
 	},
 	timeText: {
-		color: '#999999',
-		fontSize: 150,
+		color: 'black',
+		fontSize: 40,
 	},
 	dateText: {
-		color: '#999999',
+		color: 'black',
 		fontSize: 40,
-	}
+  },
+  status: {
+    backgroundColor: '#FFFFFF50',
+  }
 })
 
 export default class App extends Component {
@@ -107,7 +110,7 @@ export default class App extends Component {
 
 		return (
 			<View style={styles.container}>
-				<StatusBar style={{backgroundColor: 'transparent'}} />
+        <StatusBar style={styles.status} />
 				<Text style={styles.timeText}>
 					{this.state.time}
 				</Text>
